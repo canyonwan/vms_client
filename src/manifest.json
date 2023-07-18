@@ -1,0 +1,39 @@
+{
+  "name": "",
+  "appid": "",
+  "description": "",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "wx2d48630ece267ad6",
+    "optimization": {
+      "subPackages": true
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "setting": {
+      "urlCheck": false,
+      "checkSitMap": false,
+      "lazyCodeLoading": true,
+      "minified": true,
+      "es6": true,
+      "postcss": true
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.userLocation": {
+        "desc": "你的位置信息将用于我们为您提供更好的物流服务"
+      }
+    },
+    "requiredPrivateInfos": [
+      "getLocation"
+    ],
+    "unipush": {
+      "enable": false
+    }
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "vueVersion": "3"
+}
