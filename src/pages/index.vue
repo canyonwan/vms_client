@@ -26,9 +26,10 @@ function tabbarChangeEvent(index: string | number) {
     <cart-page v-if="currentTabbar === 3" />
     <mine-page v-if="currentTabbar === 4" />
 
-    <tn-tabbar fixed @change="tabbarChangeEvent">
+    <tn-tabbar fixed switch-animation @change="tabbarChangeEvent">
       <tn-tabbar-item
-        v-for="item in tabbarData" :key="item.name"
+        v-for="(item, index) in tabbarData" :key="item.name"
+        :bulge="index === 2"
         :text="item.name" :icon="item.icon" :active-icon="item.activeIcon"
       />
     </tn-tabbar>
