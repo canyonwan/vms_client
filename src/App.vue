@@ -10,9 +10,9 @@ onLaunch(() => {
   useGetBoundingMenuButton() // 获取胶囊按钮的位置信息
   // checkLogin()
   useGetSystemInfo()
-  locationStore.getLocation()
   useCheckUpdate()
   useUpdateCustomBarInfo()
+  locationStore.getLocation()
 })
 onShow(() => {
 })
