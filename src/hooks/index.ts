@@ -90,6 +90,10 @@ export function useGetBoundingMenuButton() {
   if (!menuButtonInfo) {
     const res = uni.getMenuButtonBoundingClientRect()
     uni.setStorageSync('MenuButtonInfo', res)
+    return menuButtonInfo
+  }
+  else {
+    return menuButtonInfo
   }
 }
 
