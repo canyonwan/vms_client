@@ -42,9 +42,9 @@ async function getScrollViewInfo() {
 <template>
   <div>
     <!-- 顶部自定义导航 -->
-    <tn-navbar id="navbar" frosted fixed back-icon="" home-icon="" :bottom-shadow="false" bg-color="rgba(135, 150, 196, 1)">
+    <tn-navbar id="navbar" frosted fixed back-icon="" home-icon="" bottom-shadow bg-color="#8397C8">
       <!-- 搜索框 -->
-      <view class="tn-round tn-white_bg tn-w-11-12">
+      <view class="tn-round tn-white_bg tn-w-full tn-ml tn-mr">
         <tn-notice-bar
           auto-hidden
           :data="searlist"

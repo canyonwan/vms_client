@@ -214,13 +214,23 @@ const swiperData = [
 function onSearch() {
   //
 }
+onMounted(() => {
+  getBoundingMenuButton()
+})
+
+const menuButtonWidth = ref(0)
+
+function getBoundingMenuButton() {
+  const res = uni.getStorageSync('MenuButtonInfo')
+  menuButtonWidth.value = res.width
+}
 </script>
 
 <template>
   <div>
     <!-- 顶部自定义导航 -->
-    <tn-navbar fixed back-icon="" home-icon="" :bottom-shadow="false" bg-color="rgba(255, 255, 255, 1)">
-      <view class="tn-round tn-gray-light_bg tn-w-4-5">
+    <tn-navbar fixed back-icon="" home-icon="" bottom-shadow bg-color="#8397C8">
+      <view class="tn-round tn-gray-light_bg tn-w-full tn-ml tn-mr">
         <tn-notice-bar
           auto-hidden
           :data="searlist"
@@ -267,8 +277,9 @@ function onSearch() {
       />
     </div>
     <!-- 促销胶囊 -->
-    <view class="tn-mt-lg" style="width: 100%;">
+    <view class="tn-pr tn-pl" style="width: 100%;">
       <image style="height: 280rpx;" src="../../../../static/imgs/xinrenli.png" />
+      <!-- <tn-lazy-load height="280" src="../../../../static/imgs/xinrenli.png" mode="widthFix" /> -->
     </view>
     <!-- 新品 -->
     <tn-scroll-list
@@ -293,7 +304,7 @@ function onSearch() {
     <!-- 商品推荐瀑布流 -->
     <view class="tn-mt-lg">
       <div class="tn-ml">
-        <tn-title title="商品推荐" size="lg" mode="hLine" assist-color="tn-red" />
+        <tn-title title="商品推荐" size="xl" mode="hLine" />
       </div>
       <goods-waterfall :data="waterfallList" />
     </view>
