@@ -25,7 +25,7 @@ function handleWaterFallFinish() {
 
 <template>
   <view class="goods-waterfall">
-    <view class="tn-p">
+    <view class="tn-pl tn-pr">
       <tn-water-fall :data="data" mode="normal" @finish="handleWaterFallFinish">
         <!-- <tn-swiper
           :data="swiperData"
