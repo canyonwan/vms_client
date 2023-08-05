@@ -265,7 +265,7 @@ function getBoundingMenuButton() {
       </tn-swiper>
     </div>
     <!-- 通知栏 -->
-    <div class="tn-mt-xl tn-ml tn-mr">
+    <div class="tn-ml tn-mr">
       <tn-notice-bar
         auto-hidden
         :data="searlist"
@@ -281,40 +281,76 @@ function getBoundingMenuButton() {
       <image style="height: 280rpx;" src="../../../../static/imgs/xinrenli.png" />
       <!-- <tn-lazy-load height="280" src="../../../../static/imgs/xinrenli.png" mode="widthFix" /> -->
     </view>
+    <div class="sale tn-m">
+      <div class="tn-gradient-bg__cool-5">
+        9块9
+      </div>
+      <div class="tn-gradient-bg__cool-6">
+        打骨折
+      </div>
+    </div>
     <!-- 新品 -->
-    <tn-scroll-list
-      indicator-color="tn-blue"
-      indicator-block-color="rgba(1, 190, 255, 0.8)"
-      :indicator-width="60"
-      :indicator-block-width="40"
-    >
-      <view class="item-container tn-pl">
-        <new-goods-item
-          v-for="i in 5"
-          :key="i"
-        >
-          <view class="empty tn-grey-light_bg" />
-          <view class="title">
-            图鸟UI
-          </view>
-        </new-goods-item>
+    <view class="tn-mt-lg">
+      <view class="tn-ml tn-mr tn-mb tn-flex-center-between">
+        <tn-title title="当季新品" size="xl" mode="hLine" />
+        <view class="tn-type-info-light-7_text tn-flex">
+          <text class="tn-type-info_text">
+            查看全部
+          </text>
+          <tn-icon name="right" type="info" />
+        </view>
       </view>
-    </tn-scroll-list>
+      <tn-scroll-list
+        indicator-color="tn-blue"
+        indicator-block-color="rgba(1, 190, 255, 0.8)"
+        :indicator-width="60"
+        :indicator-block-width="40"
+      >
+        <view class="item-container tn-pl">
+          <new-goods-item
+            v-for="i in 5"
+            :key="i"
+          >
+            <view class="empty tn-grey-light_bg" />
+            <view class="title">
+              图鸟UI
+            </view>
+          </new-goods-item>
+        </view>
+      </tn-scroll-list>
+    </view>
 
     <!-- 商品推荐瀑布流 -->
     <view class="tn-mt-lg">
-      <div class="tn-ml">
+      <view class="tn-mb tn-ml tn-mr tn-flex-center-between">
         <tn-title title="商品推荐" size="xl" mode="hLine" />
-      </div>
+        <view class="tn-type-info-light-7_text tn-flex">
+          <text class="tn-type-info_text">
+            查看全部
+          </text>
+          <tn-icon name="right" type="info" />
+        </view>
+      </view>
       <goods-waterfall :data="waterfallList" />
     </view>
   </div>
 </template>
 
 <style lang="scss" scoped>
+page {
+  background-color: var(--tn-color-bg);
+}
+.sale {
+  height: 300rpx;
+  display: flex;
+  justify-content: space-between;
+  & > view {
+    flex: 1;
+    color: var(--tn-color-white);
+  }
+}
 .swiper-container {
   width: 100%;
-  height: 320rpx;
 
   .swiper-data {
     width: 100%;
