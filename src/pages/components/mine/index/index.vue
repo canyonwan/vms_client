@@ -79,7 +79,7 @@ function getBoundingMenuButton() {
         </view>
         <view class="tn-flex tn-flex-center-between">
           <view v-for="item in myOrderOptions.slice(1, 6)" :key="item.name" class="tn-flex-column tn-flex-center-between">
-            <image :src="`/static/icons/mine/1/${item.icon}.png`" style="height: 60rpx; width: 60rpx;" />
+            <image :src="`/static/icons/mine/${item.icon}.png`" style="height: 60rpx; width: 60rpx;" />
             <text class="tn-text-sm tn-text-center tn-mt-xs">
               {{ item.name }}
             </text>
@@ -124,6 +124,45 @@ function getBoundingMenuButton() {
               <tn-icon size="34" name="set-fill" />
               <view class="tn-ml-xs">
                 系统设置
+              </view>
+            </view>
+          </tn-list-item>
+          <tn-list-item
+            bottom-border
+            bottom-border-indent
+            right-icon="right"
+            radius
+          >
+            <view class="tn-flex">
+              <tn-icon size="34" name="set-fill" />
+              <view class="tn-ml-xs">
+                系统设置
+              </view>
+            </view>
+          </tn-list-item>
+          <tn-list-item
+            bottom-border
+            bottom-border-indent
+            right-icon="right"
+            radius
+          >
+            <view class="tn-flex">
+              <tn-icon size="34" name="set-fill" />
+              <view class="tn-ml-xs">
+                系统设置
+              </view>
+            </view>
+          </tn-list-item>
+          <tn-list-item
+            bottom-border
+            bottom-border-indent
+            right-icon="right"
+            radius
+          >
+            <view class="tn-flex">
+              <tn-icon size="34" name="set-fill" />
+              <view class="tn-ml-xs">
+                系统设置2
               </view>
             </view>
           </tn-list-item>
