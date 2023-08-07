@@ -27,8 +27,8 @@ dependencies:
     specifier: ^1.0.18
     version: 1.0.18
   '@tuniao/tnui-vue3-uniapp':
-    specifier: ^1.0.8
-    version: 1.0.8(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.4.0)(@tuniao/tn-style@1.0.18)(postcss@8.4.24)(sass@1.62.1)(typescript@4.9.5)(vite@4.0.3)(vue@3.3.4)
+    specifier: ^1.0.9
+    version: 1.0.9(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.4.0)(@tuniao/tn-style@1.0.18)(postcss@8.4.24)(sass@1.62.1)(typescript@4.9.5)(vite@4.0.3)(vue@3.3.4)
   luch-request:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1747,7 +1747,7 @@ packages:
       postcss-load-config: 3.1.4(postcss@8.4.24)
       postcss-modules: 4.3.1(postcss@8.4.24)
       postcss-selector-parser: 6.0.13
-      resolve: 1.22.2
+      resolve: 1.22.3
       tapable: 2.2.1
       xregexp: 3.1.0
     transitivePeerDependencies:
@@ -3539,8 +3539,8 @@ packages:
     resolution: {integrity: sha512-sPLKvpKn1jcz0z5rfG4OtY0dxPqaRT2Dn8HeSpUclODXCgrT7sC7Hg9N3DaToElG81d+8lbtOmxHspbJ5HRrcQ==}
     dev: false
 
-  /@tuniao/tnui-vue3-uniapp@1.0.8(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.4.0)(@tuniao/tn-style@1.0.18)(postcss@8.4.24)(sass@1.62.1)(typescript@4.9.5)(vite@4.0.3)(vue@3.3.4):
-    resolution: {integrity: sha512-NAkPMO2YYiLPh0W0jOaAn2hRf1Js0MwmkfZoXN7Nd98Lq6yFJT/Fd1dnsuSTVl9+z9eE0LAA1kvmsgANeNwGLQ==}
+  /@tuniao/tnui-vue3-uniapp@1.0.9(@dcloudio/types@3.3.2)(@tuniao/tn-icon@1.4.0)(@tuniao/tn-style@1.0.18)(postcss@8.4.24)(sass@1.62.1)(typescript@4.9.5)(vite@4.0.3)(vue@3.3.4):
+    resolution: {integrity: sha512-/AbR++oxWG6RxFH60lKWHNSGDvHOwxDYr2BbG6WZD1eWOj8xPubT5Taq+gNq6ZXSxavdlNoz2cNQmUi6k0KzKQ==}
     peerDependencies:
       '@tuniao/tn-icon': ^1.4.0
       '@tuniao/tn-style': ^1.0.17
@@ -5186,7 +5186,7 @@ packages:
     dependencies:
       debug: 3.2.7
       is-core-module: 2.12.1
-      resolve: 1.22.2
+      resolve: 1.22.3
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6491,7 +6491,7 @@ packages:
       jest-pnp-resolver: 1.2.3(jest-resolve@27.5.1)
       jest-util: 27.5.1
       jest-validate: 27.5.1
-      resolve: 1.22.2
+      resolve: 1.22.3
       resolve.exports: 1.1.1
       slash: 3.0.0
     dev: true
@@ -7752,7 +7752,6 @@ packages:
       is-core-module: 2.12.1
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
-    dev: true
 
   /reusify@1.0.4:
     resolution: {integrity: sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==}

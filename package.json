@@ -20,7 +20,7 @@
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-3080620230620001",
     "@tuniao/tn-icon": "^1.4.0",
     "@tuniao/tn-style": "^1.0.18",
-    "@tuniao/tnui-vue3-uniapp": "^1.0.8",
+    "@tuniao/tnui-vue3-uniapp": "^1.0.9",
     "luch-request": "^3.1.0",
     "pinia": "2.0.35",
     "vue": "^3.3.4"
