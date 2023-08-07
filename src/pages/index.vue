@@ -6,27 +6,38 @@ import CategoryPage from './components/category/index.vue'
 import CirclePage from './components/circle/index/index.vue'
 import CartPage from './components/cart/index/index.vue'
 import MinePage from './components/mine/index/index.vue'
-
 import { tabbarData } from './options'
+import { useGetRect } from '@/hooks'
 
-const currentTabbar = ref(0)
+onMounted(() => {
+  if (uni.getStorageSync('tabBarHeight'))
+    return
+  getTabBarInfo()
+})
+
+const currentTabBar = ref(0)
 
 const notifyRef = ref<TnNotifyInstance>()
 
-function tabbarChangeEvent(index: string | number) {
-  currentTabbar.value = index as number
+function tabBarChangeEvent(index: string | number) {
+  currentTabBar.value = index as number
+}
+
+async function getTabBarInfo() {
+  const rect = await useGetRect('#tabBarId') as UniApp.NodeInfo
+  uni.setStorageSync('tabBarHeight', rect.height!)
 }
 </script>
 
 <template>
   <view class="index">
-    <home-page v-if="currentTabbar === 0" />
-    <category-page v-if="currentTabbar === 1" />
-    <circle-page v-if="currentTabbar === 2" />
-    <cart-page v-if="currentTabbar === 3" />
-    <mine-page v-if="currentTabbar === 4" />
+    <home-page v-if="currentTabBar === 0" />
+    <category-page v-if="currentTabBar === 1" />
+    <circle-page v-if="currentTabBar === 2" />
+    <cart-page v-if="currentTabBar === 3" />
+    <mine-page v-if="currentTabBar === 4" />
 
-    <tn-tabbar fixed switch-animation @change="tabbarChangeEvent">
+    <tn-tabbar id="tabBarId" fixed switch-animation @change="tabBarChangeEvent">
       <tn-tabbar-item
         v-for="(item, index) in tabbarData" :key="item.name"
         :bulge="index === 2"
