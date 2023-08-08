@@ -23,6 +23,7 @@
     "@tuniao/tnui-vue3-uniapp": "^1.0.9",
     "luch-request": "^3.1.0",
     "pinia": "2.0.35",
+    "tnuiv3p-tn-graphic-card": "^1.0.1",
     "vue": "^3.3.4"
   },
   "devDependencies": {
