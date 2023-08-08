@@ -9,23 +9,12 @@
   ],
   "subPackages": [
     {
-      "root": "subpkg/home",
+      "root": "subpkg",
       "pages": [
         {
-          "path": "search",
+          "path": "goods/goods-detail",
           "style": {
-            "navigationBarTitleText": "搜索"
-          }
-        }
-      ]
-    },
-    {
-      "root": "subpkg/category",
-      "pages": [
-        {
-          "path": "left",
-          "style": {
-            "navigationBarTitleText": "首页"
+            "navigationStyle": "custom"
           }
         }
       ]
