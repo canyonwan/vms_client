@@ -1,20 +1,20 @@
 // uni原生方法封装
 
-export function toPath(url: string) {
-  uni.navigateTo({
-    url: `/subpkg/${url}`,
+export async function toPath(path: string) {
+  return await uni.navigateTo({
+    url: `/subpkg/${path}`,
   })
 }
 
-export function switchTab(url: string) {
-  uni.switchTab({ url: `/pages/${url}/index` })
+export async function switchTab(url: string) {
+  await uni.switchTab({ url: `/pages/${url}/index` })
 }
 
-export function showToast(text: string) {
-  uni.showToast({ title: text, icon: 'none', mask: true })
+export async function showToast(text: string) {
+  await uni.showToast({ title: text, icon: 'none', mask: true })
 }
-export function showLoading(text = '', mask = true) {
-  uni.showLoading({ title: text, mask })
+export async function showLoading(text = '', mask = true) {
+  await uni.showLoading({ title: text, mask })
 }
 export function hideLoading(text?: string, mask = true) {
   uni.hideLoading()
