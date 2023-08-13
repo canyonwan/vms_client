@@ -84,6 +84,7 @@ async function getBottomBoxHeight() {
 </script>
 
 <template>
+  <page-meta :page-style="`overflow:${showSkuPopup ? 'hidden' : 'visible'}`" />
   <view class="goods-detail tn-safe-area-inset-bottom">
     <!-- 顶部自定义导航 -->
     <tn-navbar id="navbar" fixed custom-back :bottom-shadow="false" :bg-color="navBarBackgroundColor">
@@ -231,7 +232,7 @@ async function getBottomBoxHeight() {
     </view>
     <!-- 弹窗 -->
     <tn-popup v-model="showSkuPopup" bg-color="#F7F7F9" close-btn open-direction="bottom" :height="`${windowHeight - navbarHeight}px`">
-      <buy-goods-dialog />
+      <buy-goods-dialog :dialog-height="windowHeight - navbarHeight" />
       <template #closeBtn>
         <tn-icon name="close" />
       </template>
