@@ -1,9 +1,28 @@
 <script setup lang="ts">
-const loadStatus = ref('loadmore')
+const loadMoreStatus = ref('loadmore')
+
+onReachBottom(() => {
+  // if (loadMoreStatus.value === 'no-more')
+  // return
+  // unref(searchParams).page++
+  // loadMoreStatus.value = 'loading'
+  // if (cartList.value.length === cartTotal.value)
+  //   loadMoreStatus.value = 'no-more'
+  // else
+  //   cartStore.getCartPage(getScrollHeight)
+})
+
+onPullDownRefresh(() => {
+  // cartList.value = []
+  // unref(searchParams).page = 1
+  // cartStore.getCartPage(getScrollHeight)
+  loadMoreStatus.value = 'more'
+  uni.stopPullDownRefresh()
+})
 </script>
 
 <template>
-  <div class="right  tn-p-xs">
+  <div class="right tn-p-xs tn-white_bg tn-h-screen">
     <view class="tn-white_bg tn-p-xs tn-radius">
       二级分类
     </view>
@@ -37,7 +56,7 @@ const loadStatus = ref('loadmore')
         </div>
       </div>
     </view>
-    <tn-loadmore :status="loadStatus" />
+    <tn-loadmore :status="loadMoreStatus" color="tn-gray" />
   </div>
 </template>
 
