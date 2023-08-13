@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import NewGoodsItem from './components/NewGoodsItem.vue'
 import GoodsWaterfall from './components/GoodsWaterfall.vue'
+import { toPath } from '@/utils/unis'
 
 const searlist = [
   '凶姐精美壁纸',
@@ -214,6 +215,11 @@ const swiperData = [
 function onSearch() {
   //
 }
+
+function toNewGoods(path: string, title?: string) {
+  toPath(path)
+}
+
 onMounted(() => {
   getBoundingMenuButton()
 })
@@ -227,7 +233,7 @@ function getBoundingMenuButton() {
 </script>
 
 <template>
-  <div>
+  <view class="tn-white_bg">
     <!-- 顶部自定义导航 -->
     <tn-navbar fixed back-icon="" home-icon="" bottom-shadow bg-color="#8397C8">
       <view class="tn-round tn-gray-light_bg tn-w-full tn-ml tn-mr">
@@ -293,7 +299,7 @@ function getBoundingMenuButton() {
     <view class="tn-mt-lg">
       <view class="tn-ml tn-mr tn-mb tn-flex-center-between">
         <tn-title title="当季新品" size="xl" mode="hLine" />
-        <view class="tn-type-info-light-7_text tn-flex">
+        <view class="tn-type-info-light-7_text tn-flex" @click="toNewGoods('goods/goods-list?cateId=0')">
           <text class="tn-type-info_text">
             查看全部
           </text>
@@ -324,7 +330,7 @@ function getBoundingMenuButton() {
     <view class="tn-mt-lg">
       <view class="tn-mb tn-ml tn-mr tn-flex-center-between">
         <tn-title title="商品推荐" size="xl" mode="hLine" />
-        <view class="tn-type-info-light-7_text tn-flex">
+        <view class="tn-type-info-light-7_text tn-flex" @click="toNewGoods('goods/goods-list?cateId=1')">
           <text class="tn-type-info_text">
             查看全部
           </text>
@@ -333,13 +339,10 @@ function getBoundingMenuButton() {
       </view>
       <goods-waterfall :data="waterfallList" />
     </view>
-  </div>
+  </view>
 </template>
 
 <style lang="scss" scoped>
-page {
-  background-color: var(--tn-color-bg);
-}
 .sale {
   height: 300rpx;
   display: flex;
