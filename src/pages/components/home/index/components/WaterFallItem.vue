@@ -1,10 +1,16 @@
 <script lang="ts" setup>
+import { toPath } from '@/utils/unis'
+
 defineProps({
   item: {
     type: Object,
     default: () => ({}),
   },
 })
+
+async function onToGoodsDetail() {
+  await toPath('goods/goods-detail')
+}
 </script>
 
 // #ifdef MP-WEIXIN
@@ -19,7 +25,7 @@ export default {
 // #endif
 
 <template>
-  <view class="wallpaper__item tn-ml-xs tn-mr-sm tn-mb-sm">
+  <view class="wallpaper__item tn-ml-xs tn-mr-sm tn-mb-sm" @click="onToGoodsDetail">
     <view class="item__image tn-radius">
       <tn-lazy-load :src="item.mainImage" mode="widthFix" />
     </view>
