@@ -16,6 +16,12 @@
           "style": {
             "navigationStyle": "custom"
           }
+        },
+        {
+          "path": "goods/goods-list",
+          "style": {
+            "navigationStyle": "custom"
+          }
         }
       ]
     }
