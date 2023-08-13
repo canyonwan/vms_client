@@ -11,11 +11,6 @@
       <tn-title title="阿维菌素透皮溶液阿维菌素透皮溶液" size="lg" />
     </div>
     <view class="tn-red_text tn-flex tn-flex-col-center items-end">
-      <!-- <view class="logo-pic ">
-              <view class="logo-image">
-                <view class="tn-round" :style="`background-image:url(${item.userImage});width: 40rpx;height: 40rpx;background-size: cover;`" />
-              </view>
-            </view> -->
       <view>
         <text class="tn-text-xs">
           ¥
