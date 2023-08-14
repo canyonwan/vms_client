@@ -1,16 +1,11 @@
 <script setup lang="ts">
+import { goodsCategoryOptionsMap } from './options'
 import GoodsWaterfall from '@/pages/components/home/index/components/GoodsWaterfall.vue'
 
-const props = defineProps({
-  waterfallList: {
-    type: Array,
-    default: () => [],
-  },
-  cateId: {
-    type: Number,
-    default: 0,
-  },
-})
+const props = defineProps<{
+  waterfallList: any[]
+  cateId: number
+}>()
 
 onMounted(() => {
   console.log('onLoad', props.cateId)
@@ -214,7 +209,7 @@ const waterfallList = ref([{
   <div class="goods-list">
     <!-- 顶部自定义导航 -->
     <tn-navbar fixed bottom-shadow bg-color="#8397C8">
-      当季新品
+      {{ goodsCategoryOptionsMap[props.cateId] }}
     </tn-navbar>
     <view class="tn-mt">
       <goods-waterfall :data="waterfallList" />
