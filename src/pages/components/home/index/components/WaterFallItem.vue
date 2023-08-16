@@ -48,11 +48,6 @@ export default {
       <view class="tn-flex-row tn-flex-center-between tn-padding-top-xs">
         <view class="justify-content-item">
           <view class="tn-red_text tn-flex tn-flex-col-center items-end">
-            <!-- <view class="logo-pic ">
-              <view class="logo-image">
-                <view class="tn-round" :style="`background-image:url(${item.userImage});width: 40rpx;height: 40rpx;background-size: cover;`" />
-              </view>
-            </view> -->
             <view>
               <text class="tn-text-xs">
                 ¥
