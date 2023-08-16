@@ -12,16 +12,16 @@
       "root": "subpkg",
       "pages": [
         {
-          "path": "goods/goods-detail",
-          "style": {
-            "navigationStyle": "custom"
-          }
+          "path": "goods/goods-detail"
         },
         {
-          "path": "goods/goods-list",
-          "style": {
-            "navigationStyle": "custom"
-          }
+          "path": "goods/goods-list"
+        },
+        {
+          "path": "mine/about"
+        },
+        {
+          "path": "mine/my-orders"
         }
       ]
     }
