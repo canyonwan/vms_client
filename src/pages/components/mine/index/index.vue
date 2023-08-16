@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { myOrderOptions } from './options'
+import { toPath } from '@/utils/unis'
 import { useGetBoundingMenuButton } from '@/hooks'
 
 const statusBarHeight = ref(0)
@@ -70,7 +71,7 @@ function getBoundingMenuButton() {
       <view class="tn-mt-lg tn-p tn-shadow tn-white_bg">
         <view class="tn-mb tn-flex-center-between">
           <tn-title title="我的订单" size="lg" mode="vLine" />
-          <view class="tn-type-info-light-7_text">
+          <view class="tn-type-info-light-7_text" @click="toPath('mine/my-orders')">
             <text class="tn-type-info_text tn-text-sm">
               查看全部
             </text>
@@ -94,6 +95,7 @@ function getBoundingMenuButton() {
             bottom-border
             bottom-border-indent
             right-icon="right"
+            @click="toPath('mine/about')"
           >
             <view class="tn-flex">
               <tn-icon size="34" name="team-fill" />
