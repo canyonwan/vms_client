@@ -111,7 +111,7 @@ function onTabChanged(i: number) {
           <view class="tn-mr-xs tn-border tn-p-xs tn-radius tn-gray_border">
             去评价
           </view>
-          <view class="tn-mr-xs tn-border tn-p-xs tn-radius  tn-blue_text tn-blue_border">
+          <view class="tn-mr-xs tn-border tn-p-xs tn-radius  tn-white_text tn-blue_bg">
             再次购买
           </view>
         </view>
